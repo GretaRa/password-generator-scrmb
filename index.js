@@ -3,20 +3,28 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 let output1El = document.getElementById("output-1")
 let output2El = document.getElementById("output-2")
+let lengthInputEl = document.getElementById("password-input")
+let errorEl = document.getElementById("error-message")
 
 function getRandomNumber(){
   return Math.floor(Math.random() * characters.length) 
 }
 
+function setLength (){
+  return lengthInputEl.value
+}
+
 function getPasswords (){
+  
   let password1 = ""
   let password2 = ""
 
-  for (let i = 0; i < 15; i++){
+  for (let i = 0; i < setLength(); i++){
     password1 += characters[getRandomNumber()]
     password2 += characters[getRandomNumber()]
     
   }
+  
   output1El.textContent = password1
   output2El.textContent = password2
 }
