@@ -8,7 +8,6 @@
   --white-color: #ffffff;
 }
 
-
 body {
   font-family: 'Courier New', Courier, monospace;
     margin: 0;
@@ -20,7 +19,6 @@ body {
 .container{
   display: flex;
   flex-direction: column;
-  max-width: 28%;
   margin-left: 52px;
   margin-top: 115px;
 }
@@ -41,6 +39,7 @@ body {
   border-bottom: 1px solid #9CA3AF;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  max-width: 500px;
 }
 
 .generate-btn{
@@ -56,17 +55,18 @@ body {
 
 .output-group{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .output-group div{
   min-height: 20px;
+  min-width: 200px;
   background-color: var(--dark-background-color);
   color: var(--light-accent-color);
   padding: 5px 20px;
   border: 2px solid var(--dark-background-color);
   border-radius: 5px;
-  flex-grow: 1;
+  flex-grow: 0;
   margin-right: 10px;
   text-align: center;
 }
