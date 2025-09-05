@@ -4,7 +4,6 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let output1El = document.getElementById("output-1")
 let output2El = document.getElementById("output-2")
 let lengthInputEl = document.getElementById("password-input")
-let errorEl = document.getElementById("error-message")
 
 function getRandomNumber(){
   return Math.floor(Math.random() * characters.length) 
@@ -15,6 +14,23 @@ function setLength (){
     return 15
   }
   return lengthInputEl.value
+}
+
+function copyToClipboard (id, buttonID){
+  const field = document.getElementById(id)
+  const text = field.textContent 
+  const button = document.getElementById(buttonID)
+
+
+  navigator.clipboard.writeText(text)
+    .then(() =>{
+      const originalBtn = button.textContent
+      button.textContent = "Copied!"
+
+      setTimeout(() => {
+        button.textContent = originalBtn
+      }, 1500)
+    })
 }
 
 function getPasswords (){

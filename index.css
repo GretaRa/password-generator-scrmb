@@ -58,7 +58,25 @@ body {
   justify-content: flex-start;
 }
 
-.output-group div{
+.output-labels{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  text-align: center;
+  gap: 5px;
+}
+
+.output-labels button{
+  height: 34px;
+  background-color: var(--dark-background-color);
+  color: var(--light-accent-color);
+  border: 2px solid var(--dark-background-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#output-1,
+#output-2{
   min-height: 20px;
   min-width: 200px;
   background-color: var(--dark-background-color);
@@ -67,6 +85,4 @@ body {
   border: 2px solid var(--dark-background-color);
   border-radius: 5px;
   flex-grow: 0;
-  margin-right: 10px;
-  text-align: center;
 }
