@@ -11,6 +11,9 @@ function getRandomNumber(){
 }
 
 function setLength (){
+  if (lengthInputEl.value < 15 || lengthInputEl.value > 35){
+    return 15
+  }
   return lengthInputEl.value
 }
 
